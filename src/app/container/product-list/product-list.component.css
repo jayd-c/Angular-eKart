@@ -58,6 +58,7 @@
     color: #28282B;
     margin-top: 7px;
 }
+.ekart--product--inStock,
 .ekart--product--category,
 .ekart--product--available-colors{
     font-size: 12px;

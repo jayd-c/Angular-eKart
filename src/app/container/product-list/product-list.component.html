@@ -23,6 +23,9 @@
             {{product.gender}} . {{product.category}} . {{product.brand}}
         </div>
           <div class="ekart--product--available-colors">{{product.color.length}} Colors . Best Seller</div>
+          <div class="ekart--product--inStock" [style]="{fontWeight: 'bold', color: product.is_in_inventory?'green':'red'}">
+            {{product.is_in_inventory?'Available in stock': 'Not available in stock'}}
+          </div>
  </div>
 }
 @empty {
