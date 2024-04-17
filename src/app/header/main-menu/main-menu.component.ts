@@ -9,4 +9,5 @@ import { Component } from '@angular/core';
 })
 export class MainMenuComponent {
 
+  mainMenuItems  = ['Home','Products','Sale','New Arrival','Contact'];
 }
