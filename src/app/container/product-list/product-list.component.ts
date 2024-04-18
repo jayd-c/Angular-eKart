@@ -541,4 +541,12 @@ products:any = [
   totalProductCount = this.products.length;
   totalProductInStock = this.products.filter(p=> p.is_in_inventory==true).length;
   totalProductOutOfStock = this.products.filter(p=> p.is_in_inventory==false).length;
+
+  selectedFilterRadio: string = 'all';
+
+  onFilterChanged(value:string){
+    // console.log("hi from parent")
+    this.selectedFilterRadio = value;
+    console.log(this.selectedFilterRadio);
+  }
 }
