@@ -18,7 +18,7 @@
 <!-- for disabled, hidden, checked which are with boolean values don't work with 
 property binding, so, we need to use property binding 
 [value] can be also written as bind-value -->
-<search></search>
+<search (searchTextChanged)="setSearchText($event)"></search>
 
 <!-- <div *ngFor="let item of listOfStrings">
     <p>Current element of array is: {{item}}</p>
@@ -29,5 +29,5 @@ property binding, so, we need to use property binding
     <p>{{name}}</p>
    }
 </div> -->
-<product-list></product-list>
+<product-list [searchText]="searchText"></product-list>
 </div>

@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
+import { Component,Input } from '@angular/core';
 import { SearchComponent } from "./search/search/search.component";
-import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ProductListComponent } from './product-list/product-list.component';
 
@@ -14,6 +13,14 @@ import { ProductListComponent } from './product-list/product-list.component';
 export class ContainerComponent {
  
   // listOfStrings: string[] = ["Mark","Steve","Merry","John","Sarah"]
+
+  @Input()
+  searchText:string = '';
+
+  setSearchText(value:string) {
+    this.searchText = value;
+  }
+
 
   
 }
