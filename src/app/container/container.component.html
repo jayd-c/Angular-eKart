@@ -29,5 +29,8 @@ property binding, so, we need to use property binding
     <p>{{name}}</p>
    }
 </div> -->
-<product-list [searchText]="searchText"></product-list>
+<product-list [searchText]="searchText" #productListComponent></product-list>
+
+<product-detail *ngIf="productListComponent.selectedProduct"></product-detail>
+
 </div>

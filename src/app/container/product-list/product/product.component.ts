@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { Product } from '../../../Models/Product';
 
 @Component({
   selector: 'app-product',
@@ -12,20 +13,5 @@ export class ProductComponent {
   @Input()
   index:number;
   @Input()
-  product:{
-      id?: number,
-      name: string,
-      description: string,
-      brand: string,
-      gender: string,
-      category: string,
-      size: string[],
-      color: string[],
-      price: number,
-      discountPrice:number,
-      is_in_inventory: boolean,
-      items_left: number,
-      imageURL: string,
-      slug: string
-  };
+  product:Product;
 }

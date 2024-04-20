@@ -2,13 +2,14 @@ import { Component,Input } from '@angular/core';
 import { SearchComponent } from "./search/search/search.component";
 import { CommonModule } from '@angular/common';
 import { ProductListComponent } from './product-list/product-list.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 @Component({
     selector: 'container',
     standalone: true,
     templateUrl: './container.component.html',
     styleUrl: './container.component.css',
-    imports: [SearchComponent, CommonModule,ProductListComponent]
+    imports: [SearchComponent, CommonModule,ProductListComponent,ProductDetailComponent]
 })
 export class ContainerComponent {
  

@@ -14,6 +14,7 @@
   ></app-product> -->
 
   <app-product
+    (click)="selectedProduct = product"
     [product]="product"
     [index]="index" 
     *ngIf="(searchText == ''|| product.name.includes(searchText)) && 
