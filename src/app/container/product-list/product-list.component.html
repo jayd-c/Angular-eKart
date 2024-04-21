@@ -20,6 +20,14 @@
     *ngIf="(searchText == ''|| product.name.includes(searchText)) && 
     (selectedFilterRadio === product.is_in_inventory.toString() || selectedFilterRadio === 'all')"
   ></app-product>
+
+  <!-- <app-product
+  (click)="selectedProduct = product"
+  [product]="product"
+  [index]="index" 
+  *ngIf="searchText == ''|| product.name.includes(searchText)"
+></app-product> -->
+
   } @empty {
   <h1>No products available</h1>
   }
