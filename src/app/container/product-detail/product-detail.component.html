@@ -1,4 +1,4 @@
-<div class="ekart--product--details--info scroll">
+<div class="ekart--product--details--info scroll" >
     <div class="ekart-product-detail-close">
         <i class="fa fa-times" aria-hidden="true"></i>
     </div>
@@ -10,11 +10,18 @@
         <div class="ekart-product-detail-name">
             <h2>{{product.name}}</h2>
         </div>
-        <div class="ekart-product-detail-gbc">
-            <span>{{product.gender}}</span>
-            <span>{{product.brand}}</span>
-            <span>{{product.category}}</span>
+        <!-- <div class="ekart-product-detail-gbc">
+            <span [setBackground] [textColor]="'white'">{{product.gender}}</span>
+            <span [setBackground]="'yellow'" [textColor]="'black'">{{product.brand}}</span>
+            <span setBackground  [setBackground]="'black'" [textColor]="'white'">{{product.category}}</span>
+        </div> -->
+
+         <div class="ekart-product-detail-gbc">
+            <span [setBackground]="{backColor:'red', textColor:'white'}">{{product.gender}}</span>
+            <span [setBackground]="{backColor:'yellow', textColor:'black'}">{{product.brand}}</span>
+            <span  [setBackground]="{backColor:'black', textColor:'white'}">{{product.category}}</span>
         </div>
+
         <div class="ekart-product-detail-price">
             <p>
                 <b>Price Each Pair:</b>
@@ -69,8 +76,8 @@
             </div>                
         </div>
     </div>
-    <div class="ekart-product-detail-addtoCart">
-        <button *ngIf="product.is_in_inventory; else elseTemplateNotifyMe" class="btn-add-to-cart">ADD TO CART</button>
+    <div class="ekart-product-detail-addtoCart" >
+        <button *ngIf="product.is_in_inventory; else elseTemplateNotifyMe" class="btn-add-to-cart" appHover>ADD TO CART</button>
         <ng-template #elseTemplateNotifyMe>
             <button class="btn-add-to-cart">NOTIFY ME</button>
         </ng-template>

@@ -1,6 +1,6 @@
     
-    <div class="ekart--product--item">
-
+    <div class="ekart--product--item" appHighlight [disableProduct]="!product.is_in_inventory">
+      <!-- coding to show a product @for in product-list -->
     <div class="ekart-wishlist-sale-container">
         <div class="ekart--add--to--wishlist">
           <i class="fa fa-heart-o" aria-hidden="true"></i>
@@ -19,6 +19,7 @@
       <div class="ekart--product--name">{{product.name}}</div>
       <div class="ekart--product--category">
         {{product.gender}} . {{product.category}} . {{product.brand}}
+        
     </div>
       <div class="ekart--product--available-colors">{{product.color.length}} Colors . Best Seller</div>
       <div class="ekart--product--inStock" [style]="{fontWeight: 'bold', color: product.is_in_inventory?'green':'red'}">
